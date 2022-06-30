@@ -1,3 +1,6 @@
+---
+to: src/components/<%= name %>/index.tsx
+---
 import React from 'react';
 import styled from 'styled-components/native';
 
@@ -14,11 +17,11 @@ const Text = styled.Text`
   font-size: 16px;
 `;
 
-interface BaseProps {
+interface <%= name %>Props {
   text: string;
 }
 
-export default function Base({ text }: BaseProps) {
+export default function <%= name %>({ text }: <%= name %>Props) {
   return (
     <Container>
       <Text>{text}</Text>
