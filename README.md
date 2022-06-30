@@ -1,6 +1,13 @@
 # Expo Rest Template
 
-Full typing with TypeScript integrated with:
+# Instalação
+
+`git clone https://github.com/lucasrocali/expo-ts-rest-template.git nome-projeto`
+`cd nome-projet` (ou abrir pelo VC Code)
+`npm install` (ou `yarn install`)
+`npm start`
+
+Full typing with TypeScript integrated with :
 
 - Prettier
 - Eslint
