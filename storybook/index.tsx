@@ -1,7 +1,8 @@
+import React from 'react';
 import { getStorybookUI, configure } from '@storybook/react-native';
+import { LightWrapper } from 'src/theme/wrappers';
 import { loadStories } from './storyLoader';
 import './rn-addons';
-import { LightWrapper } from 'src/theme/wrappers';
 
 configure(() => {
   loadStories();

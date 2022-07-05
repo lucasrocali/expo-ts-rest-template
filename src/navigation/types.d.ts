@@ -9,10 +9,9 @@ export type RootStackParamList = {
 
 export type CharactersStackParamList = {
   Characters: undefined;
-};
-
-export type EpisodesStackParamList = {
-  Episodes: undefined;
+  Character: {
+    id: number;
+  };
 };
 
 export type ProfileStackParamList = {
@@ -21,6 +20,5 @@ export type ProfileStackParamList = {
 
 export type MainTabParamList = {
   CharactersStack: NavigatorScreenParams<CharactersStackParamList>;
-  EpisodesStack: NavigatorScreenParams<EpisodesStackParamList>;
   ProfileStack: NavigatorScreenParams<ProfileStackParamList>;
 };

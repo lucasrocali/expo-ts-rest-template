@@ -1,7 +1,7 @@
 import * as React from 'react';
-import styled from 'styled-components/native';
-import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
+import { storiesOf } from '@storybook/react-native';
+import styled from 'styled-components/native';
 import ButtonIcon from './';
 
 const BackButtonIcon = styled(ButtonIcon).attrs({

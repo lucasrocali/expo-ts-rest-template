@@ -1,8 +1,8 @@
 import React from 'react';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import {
   useNavigation /*, useRoute, RouteProp*/,
 } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from 'src/navigation/types';
 import BaseLayout from './layout';
 

@@ -4,3 +4,4 @@ node_modules
 babel.config.js
 storybook/storyLoader.js
 _templates
+setupJest.js

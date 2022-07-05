@@ -19,6 +19,7 @@
     "jest/prefer-to-have-length": "warn",
     "jest/valid-expect": "error",
     "react/prop-types": "off",
+    "@typescript-eslint/no-var-requires": 0,
     "import/no-unresolved": "error",
     "import/order": [
       "error",

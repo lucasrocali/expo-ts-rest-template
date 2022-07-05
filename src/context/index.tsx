@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { ThemeProvider } from 'styled-components/native';
-import { QueryClientProvider, QueryClient } from 'react-query';
-import { AuthProvider } from './auth';
 import {
   SafeAreaProvider,
   SafeAreaInsetsContext,
 } from 'react-native-safe-area-context';
+import { QueryClientProvider, QueryClient } from 'react-query';
+import { ThemeProvider } from 'styled-components/native';
 import { defaultSafeAreaInsets, light } from 'src/theme';
+import { AuthProvider } from './auth';
 
 const queryClient = new QueryClient();
 

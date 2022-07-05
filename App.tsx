@@ -1,11 +1,11 @@
 import React from 'react';
-import AppLoading from 'expo-app-loading';
 import {
   useFonts,
   Inter_300Light,
   Inter_400Regular,
   Inter_700Bold,
 } from '@expo-google-fonts/inter';
+import AppLoading from 'expo-app-loading';
 
 const STORYBOOK_ENABLED = true;
 
