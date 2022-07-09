@@ -10,6 +10,7 @@ function loadStories() {
   require('../src/components/Icon/index.stories');
   require('../src/components/NavHeader/index.stories');
   require('../src/screens/Base/layout.stories');
+  require('../src/screens/Character/layout.stories');
   require('../src/screens/Characters/layout.stories');
 }
 
@@ -20,6 +21,7 @@ const stories = [
   '../src/components/Icon/index.stories',
   '../src/components/NavHeader/index.stories',
   '../src/screens/Base/layout.stories',
+  '../src/screens/Character/layout.stories',
   '../src/screens/Characters/layout.stories',
 ];
 

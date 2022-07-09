@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Base from 'src/screens/Base';
+import Character from 'src/screens/Character';
 import Characters from 'src/screens/Characters';
 import {
   RootStackParamList,
@@ -29,6 +30,10 @@ function CharactersStack(): JSX.Element {
       <CharactersStackNavigator.Screen
         name={'Characters'}
         component={Characters}
+      />
+      <CharactersStackNavigator.Screen
+        name={'Character'}
+        component={Character}
       />
     </CharactersStackNavigator.Navigator>
   );

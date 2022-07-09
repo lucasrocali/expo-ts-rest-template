@@ -2,7 +2,10 @@ import React from 'react';
 import styled from 'styled-components/native';
 import CharacterCell from 'src/components/CharacterCell';
 import NavHeader from 'src/components/NavHeader';
+import { TabScreen } from 'src/components/Screen';
 import { Character } from 'src/data/models/character';
+
+const Container = styled(TabScreen)``;
 
 const FlatList = styled.FlatList``;
 
@@ -45,7 +48,7 @@ export default function CharactersLayout({
   };
 
   return (
-    <>
+    <Container>
       <NavHeader title={'Characters'} />
       <FlatList<React.ElementType>
         data={characters}
@@ -58,6 +61,6 @@ export default function CharactersLayout({
         onEndReachedThreshold={0.3}
         onEndReached={() => onFetchMore()}
       />
-    </>
+    </Container>
   );
 }
