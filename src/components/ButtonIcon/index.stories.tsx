@@ -27,7 +27,7 @@ export const actions = {
   onPress: action('onPress'),
 };
 
-storiesOf('ButtonIcon', module).add('default', () => (
+storiesOf('components/ButtonIcon', module).add('default', () => (
   <>
     <BackButtonIcon {...actions} />
     <CircleBackButtonIcon {...actions} />

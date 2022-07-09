@@ -6,6 +6,6 @@ import Base from './';
 export const actions = {
   // onPress: action('onPress'),
 };
-storiesOf('Base', module).add('default', () => (
+storiesOf('components/Base', module).add('default', () => (
   <Base text={'Base Component'} {...actions} />
 ));

@@ -7,7 +7,7 @@ import CharacterCell from './';
 export const actions = {
   onPress: action('onPress'),
 };
-storiesOf('CharacterCell', module).add('default', () => (
+storiesOf('components/CharacterCell', module).add('default', () => (
   <>
     <CharacterCell character={CHARACTER_1} {...actions} />
     <CharacterCell character={CHARACTER_2} {...actions} />
