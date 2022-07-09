@@ -3,30 +3,30 @@ import styled from 'styled-components/native';
 import ButtonIcon from '../ButtonIcon';
 
 const Container = styled.View`
-  padding-top: ${({ theme }) => theme.safeAreaInsets.top + 16}px;
-  padding-horizontal: 16px;
-  padding-bottom: 16px;
-  background-color: ${({ theme }) => theme.color.primary.c900};
+  padding: 16px;
+  border-bottom-width: 1px;
+  border-color: ${({ theme }) => theme.color.gray.c400};
+`;
+
+const Content = styled.View`
+  flex-direction: row;
 `;
 
 const Title = styled.Text`
+  flex: 1;
   font-family: ${({ theme }) => theme.fontFamily.inter.bold};
   font-size: 18px;
-  color: ${({ theme }) => theme.color.gray.c25};
+  color: ${({ theme }) => theme.color.gray.c900};
   text-align: center;
 `;
 
-const LeftView = styled.View`
-  position: absolute;
-  left: 16px;
-  top: 0px;
-  bottom: 0px;
-  justify-content: center;
+const ButtonView = styled.View`
+  width: 30px;
 `;
 
 const BackButtonIcon = styled(ButtonIcon).attrs(({ theme }) => ({
   name: 'chevron-left',
-  color: theme.color.gray.c25,
+  color: theme.color.gray.c900,
 }))``;
 
 interface NavHeaderProps {
@@ -37,15 +37,18 @@ interface NavHeaderProps {
 export default function NavHeader({ title, onGoBack }: NavHeaderProps) {
   return (
     <Container>
-      <LeftView>
-        {onGoBack ? (
-          <BackButtonIcon
-            testID={'backButtonIcon'}
-            onPress={() => onGoBack()}
-          />
-        ) : null}
-      </LeftView>
-      <Title>{title}</Title>
+      <Content>
+        <ButtonView>
+          {onGoBack ? (
+            <BackButtonIcon
+              testID={'backButtonIcon'}
+              onPress={() => onGoBack()}
+            />
+          ) : null}
+        </ButtonView>
+        <Title>{title}</Title>
+        <ButtonView></ButtonView>
+      </Content>
     </Container>
   );
 }

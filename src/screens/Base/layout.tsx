@@ -1,9 +1,11 @@
 import React from 'react';
+import styled from 'styled-components/native';
 import NavHeader from 'src/components/NavHeader';
 import { StackScreen } from 'src/components/Screen';
-// import styled from 'styled-components/native';
 
-// const Content = styled.View``;
+const Container = styled(StackScreen)``;
+
+const ScrollView = styled.ScrollView``;
 
 interface BaseLayoutProps {
   onGoBack: () => void;
@@ -11,9 +13,9 @@ interface BaseLayoutProps {
 
 export default function BaseLayout({ onGoBack }: BaseLayoutProps) {
   return (
-    <>
+    <Container>
       <NavHeader title={'Base'} onGoBack={onGoBack} />
-      <StackScreen></StackScreen>
-    </>
+      <ScrollView></ScrollView>
+    </Container>
   );
 }

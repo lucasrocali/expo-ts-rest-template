@@ -4,9 +4,11 @@ to: src/screens/<%= name %>/layout.tsx
 import React from 'react';
 import NavHeader from 'src/components/NavHeader';
 import { StackScreen } from 'src/components/Screen';
-// import styled from 'styled-components/native';
+import styled from 'styled-components/native';
 
-// const Content = styled.View``;
+const Container = styled(StackScreen)``;
+
+const ScrollView = styled.ScrollView``;
 
 interface <%= name %>LayoutProps {
   onGoBack: () => void;
@@ -14,9 +16,9 @@ interface <%= name %>LayoutProps {
 
 export default function <%= name %>Layout({ onGoBack }: <%= name %>LayoutProps) {
   return (
-    <>
+    <Container>
       <NavHeader title={'<%= name %>'} onGoBack={onGoBack} />
-      <StackScreen></StackScreen>
-    </>
+      <ScrollView></ScrollView>
+    </Container>
   );
 }

@@ -3,11 +3,11 @@ to: src/screens/<%= name %>/index.test.tsx
 ---
 import React from 'react';
 import { jest } from '@jest/globals';
+import { useNavigation /*, useRoute*/ } from '@react-navigation/native';
 import { fireEvent, render } from '@testing-library/react-native';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import { AppProviders } from 'src/context';
-import { useNavigation } from '@react-navigation/native';
 import { API_URL } from 'src/data/api';
 import <%= name %>Screen from './';
 
@@ -19,6 +19,12 @@ jest.mock('@react-navigation/native');
   goBack: mockGoBack,
   navigate: mockNavigate,
 });
+
+// (useRoute as jest.Mock).mockReturnValue({
+//   params: {
+//     id: '',
+//   },
+// });
 
 const server = setupServer(
   rest.get(`${API_URL}/SOME_URL`, (_, res, ctx) => {
