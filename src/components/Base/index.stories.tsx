@@ -1,11 +1,18 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react-native';
 // import { action } from '@storybook/addon-actions';
+import styled from 'styled-components/native';
 import Base from './';
+
+const Container = styled.View`
+  padding: 20px;
+`;
 
 export const actions = {
   // onPress: action('onPress'),
 };
 storiesOf('components/Base', module).add('default', () => (
-  <Base text={'Base Component'} {...actions} />
+  <Container>
+    <Base text={'Base Component'} {...actions} />
+  </Container>
 ));

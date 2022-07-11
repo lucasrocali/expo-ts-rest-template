@@ -3,6 +3,7 @@ import styled from 'styled-components/native';
 import NavHeader from 'src/components/NavHeader';
 import { TabScreen } from 'src/components/Screen';
 import { Character } from 'src/data/models/character';
+import { t } from 'src/utils/i18n';
 
 const Container = styled(TabScreen)``;
 
@@ -52,7 +53,7 @@ export default function CharacterLayout({
 }: CharacterLayoutProps) {
   return (
     <Container>
-      <NavHeader title={'Character'} onGoBack={onGoBack} />
+      <NavHeader title={t('character')} onGoBack={onGoBack} />
       <ScrollView>
         <Header>
           {character ? (

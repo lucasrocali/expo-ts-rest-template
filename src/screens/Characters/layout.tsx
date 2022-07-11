@@ -4,6 +4,7 @@ import CharacterCell from 'src/components/CharacterCell';
 import NavHeader from 'src/components/NavHeader';
 import { TabScreen } from 'src/components/Screen';
 import { Character } from 'src/data/models/character';
+import { t } from 'src/utils/i18n';
 
 const Container = styled(TabScreen)``;
 
@@ -49,7 +50,7 @@ export default function CharactersLayout({
 
   return (
     <Container>
-      <NavHeader title={'Characters'} />
+      <NavHeader title={t('characters')} />
       <FlatList<React.ElementType>
         data={characters}
         renderItem={renderItem}

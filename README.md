@@ -7,13 +7,17 @@
 - `npm install` (ou `yarn install`)
 - `npm start`
 
-Full typing with TypeScript integrated with :
+Full typing expo/react-native project integrated with :
 
+- Typescript
 - Prettier
 - Eslint
 - Styled Components
 - Storybook
 - React Navigation
+- Jest
+- i18n
+-
 
 ## Scripts and refs
 
@@ -98,4 +102,14 @@ https://mswjs.io/docs/getting-started/install
 ```
 yarn add msw --dev
 
+```
+
+- i18n
+
+https://docs.expo.dev/versions/latest/sdk/localization/
+
+```
+expo install expo-localization
+yarn add i18n-js
+yarn add -D @types/i18n-js
 ```

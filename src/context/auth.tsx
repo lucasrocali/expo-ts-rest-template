@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext, useMemo } from 'react';
+import { refreshToken } from 'src/data/operations/auth';
 import {
   getStoredToken,
   setStoredToken,
@@ -23,9 +24,18 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [token, setToken] = useState<string | null>();
 
   async function rehydrate() {
-    const token = await getStoredToken();
-    setToken(token);
+    try {
+      const token = await getStoredToken();
+      setToken(token);
 
+      if (token) {
+        //just a initial logic to handle auto login
+        const { token: refreshedToken } = await refreshToken();
+        setToken(refreshedToken);
+      }
+    } catch (e) {
+      logout();
+    }
     setRehydrated(true);
   }
 

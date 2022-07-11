@@ -1,0 +1,11 @@
+{
+  "base": "Base",
+  "launch": "Launch",
+  "login": "Login",
+  "profile": "Perfil",
+  "logout": "Logout",
+  "character": "Personagem",
+  "characters": "Personagens",
+  "email": "Email",
+  "password": "Senha"
+}

@@ -3,9 +3,11 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Base from 'src/screens/Base';
 import Character from 'src/screens/Character';
 import Characters from 'src/screens/Characters';
+import Launch from 'src/screens/Launch';
+import Login from 'src/screens/Login';
+import Profile from 'src/screens/Profile';
 import {
   RootStackParamList,
   MainTabParamList,
@@ -46,7 +48,7 @@ function ProfileStack(): JSX.Element {
         headerShown: false,
       }}
     >
-      <ProfileStackNavigator.Screen name={'Profile'} component={Base} />
+      <ProfileStackNavigator.Screen name={'Profile'} component={Profile} />
     </ProfileStackNavigator.Navigator>
   );
 }
@@ -80,7 +82,21 @@ export default function RootNavigation(): JSX.Element {
           headerShown: false,
         }}
       >
-        <RootStack.Screen name={'MainTab'} component={MainTab} />
+        <RootStack.Screen name={'Launch'} component={Launch} />
+        <RootStack.Screen
+          name={'Login'}
+          component={Login}
+          options={{
+            animation: 'slide_from_bottom',
+          }}
+        />
+        <RootStack.Screen
+          name={'MainTab'}
+          component={MainTab}
+          options={{
+            animation: 'slide_from_bottom',
+          }}
+        />
       </RootStack.Navigator>
     </NavigationContainer>
   );
