@@ -7,12 +7,15 @@ import { t } from 'src/utils/i18n';
 
 const Container = styled(StackScreen)``;
 
-const TextInput = styled.TextInput`
+const TextInput = styled.TextInput.attrs(({ theme }) => ({
+  placeholderTextColor: theme.color.gray.c500,
+}))`
   padding: 20px;
   border-width: 1px;
   border-color: ${({ theme }) => theme.color.gray.c900};
   border-radius: 10px;
   margin-bottom: 20px;
+  color: ${({ theme }) => theme.color.gray.c900};
 `;
 
 const Content = styled.View`

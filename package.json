@@ -1,6 +1,28 @@
 {
   "name": "@rocali/expo-ts-rest-template",
-  "version": "1.0.",
+  "version": "1.0.1",
+  "description": "Expo project template with TypeScript, eslint, prettier, react-navigation, storybook, jest and examples for a quick start.",
+  "keywords": [
+    "expo",
+    "typescript",
+    "template",
+    "expo-template",
+    "react-native",
+    "react-navigation",
+    "jest",
+    "eslint",
+    "prettier",
+    "storybook",
+    "react-query",
+    "testing-library"
+  ],
+  "homepage": "https://github.com/lucasrocali/expo-ts-rest-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucasrocali/expo-ts-rest-template.git"
+  },
+  "author": "Lucas Rocali",
+  "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",

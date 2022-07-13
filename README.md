@@ -1,5 +1,7 @@
 # Expo Rest Template
 
+<img src="./demo.gif" />
+
 Expo project template with the following features:
 
 - Full [TypeScript](https://docs.expo.dev/guides/typescript/) integration
@@ -8,9 +10,9 @@ Expo project template with the following features:
 - [React Navigation](https://reactnavigation.org/docs/getting-started/) with initial structure to get started
 - [Storybook](https://storybook.js.org/tutorials/intro-to-storybook/react-native/en/get-started/) integrated with components and screens
 - [Hygen](https://www.hygen.io/docs/quick-start) for generating new components and screens
-- [@testing-library/react-native](https://testing-library.com/docs/react-native-testing-library/intro/)
-- [i18n](https://docs.expo.dev/versions/latest/sdk/localization/)
-- React Query with initial data structure
+- [@testing-library/react-native](https://testing-library.com/docs/react-native-testing-library/intro/) with testing examples
+- [i18n](https://docs.expo.dev/versions/latest/sdk/localization/) integration
+- [React Query](https://react-query-v2.tanstack.com/) with initial data structure and examples integrated with [Rick and Morty API](https://rickandmortyapi.com/)
 - Initial components structure integrated with storybook
 - Initial screens structure integrated with storybook and tests
 

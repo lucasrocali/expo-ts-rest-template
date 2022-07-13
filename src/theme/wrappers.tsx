@@ -1,10 +1,13 @@
 import React from 'react';
+import { useColorScheme } from 'react-native';
 import { ThemeProvider } from 'styled-components/native';
-import { light } from './';
+import { light, dark } from './';
 
 interface WrapperProps {
   children: React.ReactNode;
 }
-export const LightWrapper = ({ children }: WrapperProps): JSX.Element => {
-  return <ThemeProvider theme={light}>{children}</ThemeProvider>;
+export const ThemeWrapper = ({ children }: WrapperProps): JSX.Element => {
+  const colorScheme = useColorScheme();
+  const theme = colorScheme === 'dark' ? dark : light;
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };

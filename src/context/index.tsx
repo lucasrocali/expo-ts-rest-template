@@ -1,11 +1,7 @@
 import * as React from 'react';
-import {
-  SafeAreaProvider,
-  SafeAreaInsetsContext,
-} from 'react-native-safe-area-context';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { QueryClientProvider, QueryClient } from 'react-query';
-import { ThemeProvider } from 'styled-components/native';
-import { defaultSafeAreaInsets, light } from 'src/theme';
+import { ThemeWrapper } from 'src/theme/wrappers';
 import { AuthProvider } from './auth';
 
 const queryClient = new QueryClient();
@@ -16,20 +12,11 @@ interface AppProvidersProps {
 const AppProviders = ({ children }: AppProvidersProps) => {
   return (
     <SafeAreaProvider>
-      <SafeAreaInsetsContext.Consumer>
-        {(insets) => (
-          <ThemeProvider
-            theme={{
-              ...light,
-              safeAreaInsets: insets || defaultSafeAreaInsets,
-            }}
-          >
-            <QueryClientProvider client={queryClient}>
-              <AuthProvider>{children}</AuthProvider>
-            </QueryClientProvider>
-          </ThemeProvider>
-        )}
-      </SafeAreaInsetsContext.Consumer>
+      <ThemeWrapper>
+        <QueryClientProvider client={queryClient}>
+          <AuthProvider>{children}</AuthProvider>
+        </QueryClientProvider>
+      </ThemeWrapper>
     </SafeAreaProvider>
   );
 };

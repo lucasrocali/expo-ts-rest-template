@@ -4,6 +4,12 @@ import { storiesOf } from '@storybook/react-native';
 import styled from 'styled-components/native';
 import ButtonIcon from './';
 
+const Container = styled.View`
+  flex: 1;
+  background-color: ${({ theme }) => theme.color.gray.c25};
+  padding: 20px;
+`;
+
 const BackButtonIcon = styled(ButtonIcon).attrs({
   name: 'chevron-left',
 })`
@@ -28,8 +34,8 @@ export const actions = {
 };
 
 storiesOf('components/ButtonIcon', module).add('default', () => (
-  <>
+  <Container>
     <BackButtonIcon {...actions} />
     <CircleBackButtonIcon {...actions} />
-  </>
+  </Container>
 ));

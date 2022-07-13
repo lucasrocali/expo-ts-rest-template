@@ -29,19 +29,9 @@ interface FontFamily {
   inter: FontInter;
 }
 
-export interface EdgeInsets {
-  top: number;
-  right: number;
-  bottom: number;
-  left: number;
-}
-
-export type ColorScheme = 'light' | 'dark';
-
 declare module 'styled-components' {
   export interface DefaultTheme {
     color: Color;
     fontFamily: FontFamily;
-    safeAreaInsets: EdgeInsets;
   }
 }

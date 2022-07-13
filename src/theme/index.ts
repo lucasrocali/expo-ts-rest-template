@@ -2,13 +2,6 @@ import { DefaultTheme } from 'styled-components';
 
 //from https://www.figma.com/community/file/1029506782158027808
 
-export const defaultSafeAreaInsets: DefaultTheme['safeAreaInsets'] = {
-  top: 0,
-  right: 0,
-  bottom: 0,
-  left: 0,
-};
-
 export const light: DefaultTheme = {
   color: {
     gray: {
@@ -45,5 +38,42 @@ export const light: DefaultTheme = {
       bold: 'Inter700',
     },
   },
-  safeAreaInsets: defaultSafeAreaInsets,
+};
+
+export const dark: DefaultTheme = {
+  color: {
+    gray: {
+      c25: '#101828',
+      c50: '#1D2939',
+      c100: '#344054',
+      c200: ' #475467',
+      c300: '#667085',
+      c400: '#98A2B3',
+      c500: '#D0D5DD',
+      c600: '#E4E7EC',
+      c700: '#F2F4F7',
+      c800: '#F9FAFB',
+      c900: '#FCFCFD',
+    },
+    primary: {
+      c25: '#42307D',
+      c50: '#53389E',
+      c100: '#6941C6',
+      c200: ' #7F56D9',
+      c300: '#9E77ED',
+      c400: '#B692F6',
+      c500: '#D6BBFB',
+      c600: '#E9D7FE',
+      c700: '#F4EBFF',
+      c800: '#F9F5FF',
+      c900: '#FCFAFF',
+    },
+  },
+  fontFamily: {
+    inter: {
+      light: 'Inter300',
+      regular: 'Inter400',
+      bold: 'Inter700',
+    },
+  },
 };

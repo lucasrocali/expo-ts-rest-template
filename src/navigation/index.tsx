@@ -3,6 +3,8 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useTheme } from 'styled-components/native';
+import Icon from 'src/components/Icon';
 import Character from 'src/screens/Character';
 import Characters from 'src/screens/Characters';
 import Launch from 'src/screens/Launch';
@@ -54,11 +56,25 @@ function ProfileStack(): JSX.Element {
 }
 
 function MainTab(): JSX.Element {
+  const theme = useTheme();
   return (
     <BottomTabNavigator.Navigator
-      screenOptions={{
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ color }) => {
+          return (
+            <Icon
+              name={route.name === 'CharactersStack' ? 'list' : 'home'}
+              color={color}
+            />
+          );
+        },
         headerShown: false,
-      }}
+        tabBarActiveTintColor: theme.color.primary.c500,
+        tabBarInactiveTintColor: theme.color.gray.c600,
+        tabBarStyle: {
+          backgroundColor: theme.color.gray.c25,
+        },
+      })}
     >
       <BottomTabNavigator.Screen
         name={'CharactersStack'}

@@ -1,6 +1,8 @@
 import React from 'react';
 import { getStorybookUI, configure } from '@storybook/react-native';
-import { LightWrapper } from 'src/theme/wrappers';
+import { Platform } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { ThemeWrapper } from 'src/theme/wrappers';
 import { loadStories } from './storyLoader';
 import './rn-addons';
 
@@ -13,9 +15,18 @@ const StorybookUI = getStorybookUI({
 });
 
 export default function StorybookApp(): JSX.Element {
+  if (Platform.OS === 'web') {
+    return (
+      <SafeAreaProvider>
+        <ThemeWrapper>
+          <StorybookUI />
+        </ThemeWrapper>
+      </SafeAreaProvider>
+    );
+  }
   return (
-    <LightWrapper>
+    <ThemeWrapper>
       <StorybookUI />
-    </LightWrapper>
+    </ThemeWrapper>
   );
 }
