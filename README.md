@@ -2,6 +2,8 @@
 
 <img src="./demo.gif" />
 
+Check [demo gif](https://github.com/lucasrocali/expo-ts-rest-template)
+
 Expo project template with the following features:
 
 - Full [TypeScript](https://docs.expo.dev/guides/typescript/) integration

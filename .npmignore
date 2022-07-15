@@ -2,3 +2,4 @@
 .npmignore
 yarn.lock
 package-lock.json
+demo.gif
