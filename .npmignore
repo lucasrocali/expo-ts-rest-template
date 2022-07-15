@@ -1,0 +1,4 @@
+.expo
+.npmignore
+yarn.lock
+package-lock.json
