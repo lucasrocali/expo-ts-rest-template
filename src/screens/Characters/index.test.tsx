@@ -58,6 +58,8 @@ describe('CharactersScreen', () => {
 
     const characterCell1 = getByTestId(`character-cell-${CHARACTER_1.id}`);
     fireEvent.press(characterCell1);
-    expect(mockNavigate).toBeCalledWith('Character', { id: CHARACTER_1.id });
+    expect(mockNavigate).toHaveBeenCalledWith('Character', {
+      id: CHARACTER_1.id,
+    });
   });
 });

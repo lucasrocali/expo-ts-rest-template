@@ -26,7 +26,7 @@ describe('LaunchScreen', () => {
   });
 
   test('should navigate to MainTab if logged', async () => {
-    mockGetStoredToken.mockResolvedValue('token');
+    mockGetStoredToken.mockResolvedValue('token' as never);
 
     render(
       <AppProviders>
@@ -35,14 +35,14 @@ describe('LaunchScreen', () => {
     );
 
     await waitFor(() => {
-      expect(mockReset).toBeCalledWith({
+      expect(mockReset).toHaveBeenCalledWith({
         routes: [{ name: 'MainTab' }],
       });
     });
   });
 
   test('should navigate to Login if not logged', async () => {
-    mockGetStoredToken.mockResolvedValue(null);
+    mockGetStoredToken.mockResolvedValue(null as never);
 
     render(
       <AppProviders>
@@ -51,7 +51,7 @@ describe('LaunchScreen', () => {
     );
 
     await waitFor(() => {
-      expect(mockNavigate).toBeCalledWith('Login');
+      expect(mockNavigate).toHaveBeenCalledWith('Login');
     });
   });
 });

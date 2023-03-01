@@ -32,7 +32,7 @@ describe('ProfileScreen', () => {
     fireEvent.press(buttonLogout);
 
     await waitFor(() => {
-      expect(mockReset).toBeCalledWith({
+      expect(mockReset).toHaveBeenCalledWith({
         routes: [{ name: 'Login' }],
       });
     });

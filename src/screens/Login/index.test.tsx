@@ -30,7 +30,7 @@ describe('LoginScreen', () => {
 
     const buttonLogin = getByTestId('button-login');
     fireEvent.press(buttonLogin);
-    expect(mockReset).not.toBeCalled();
+    expect(mockReset).not.toHaveBeenCalled();
   });
 
   test('should reset navigation to MainTab on success login', async () => {
@@ -50,7 +50,7 @@ describe('LoginScreen', () => {
     fireEvent.press(buttonLogin);
 
     await waitFor(() => {
-      expect(mockReset).toBeCalledWith({
+      expect(mockReset).toHaveBeenCalledWith({
         routes: [{ name: 'MainTab' }],
       });
     });

@@ -52,6 +52,6 @@ describe('BaseScreen', () => {
 
     const backButtonIcon = getByTestId('backButtonIcon');
     fireEvent.press(backButtonIcon);
-    expect(mockGoBack).toBeCalled();
+    expect(mockGoBack).toHaveBeenCalled();
   });
 });

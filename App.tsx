@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
-  useFonts,
   Inter_300Light,
   Inter_400Regular,
   Inter_700Bold,
 } from '@expo-google-fonts/inter';
-import AppLoading from 'expo-app-loading';
+import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
 import { LogBox } from 'react-native';
 LogBox.ignoreAllLogs();
 
@@ -18,8 +18,14 @@ export default function App() {
     Inter700: Inter_700Bold,
   });
 
+  useEffect(() => {
+    if (fontsLoaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
   if (!fontsLoaded) {
-    return <AppLoading />;
+    return null;
   }
 
   const AppComponent =

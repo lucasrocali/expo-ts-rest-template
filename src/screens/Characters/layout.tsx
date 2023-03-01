@@ -1,4 +1,5 @@
 import React from 'react';
+import { FlatList } from 'react-native';
 import styled from 'styled-components/native';
 import CharacterCell from 'src/components/CharacterCell';
 import NavHeader from 'src/components/NavHeader';
@@ -7,8 +8,6 @@ import { Character } from 'src/data/models/character';
 import { t } from 'src/utils/i18n';
 
 const Container = styled(TabScreen)``;
-
-const FlatList = styled.FlatList``;
 
 const Loading = styled.ActivityIndicator.attrs(({ theme }) => ({
   color: theme.color.gray.c500,
@@ -51,7 +50,7 @@ export default function CharactersLayout({
   return (
     <Container>
       <NavHeader title={t('characters')} />
-      <FlatList<React.ElementType>
+      <FlatList
         data={characters}
         renderItem={renderItem}
         refreshControl={
