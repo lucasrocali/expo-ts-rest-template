@@ -1,6 +1,6 @@
 {
   "name": "@rocali/expo-ts-rest-template",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Expo project template with TypeScript, eslint, prettier, react-navigation, storybook, jest and examples for a quick start.",
   "keywords": [
     "expo",

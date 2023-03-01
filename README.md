@@ -21,7 +21,7 @@ Expo project template with the following features:
 # Install
 
 ```
-expo init --template @rocali/expo-ts-rest-template MyApp
+npx create-expo-app --template @rocali/expo-ts-rest-template my-app
 ```
 
 # Usage
